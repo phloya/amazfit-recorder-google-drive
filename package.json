@@ -1,0 +1,25 @@
+{
+  "name": "amazfit_recorder",
+  "version": "1.1.1",
+  "description": "One-button voice recorder for Amazfit Balance 2: recordings go to your Google Drive, sorted by day",
+  "private": true,
+  "scripts": {
+    "build": "zeus build",
+    "preview": "node -r ./tools/qr_hook.cjs node_modules/@zeppos/zeus-cli/bin/main.js preview -t \"Amazfit Balance 2\" && node tools/make_qr.cjs",
+    "login": "zeus login",
+    "test": "node tools/test_ogg.cjs"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@zeppos/zml": "^0.0.43"
+  },
+  "devDependencies": {
+    "@zeppos/device-types": "^4.0.0",
+    "@zeppos/zeus-cli": "^1.9.3",
+    "opusscript": "^0.1.1",
+    "qrcode": "^1.5.4"
+  },
+  "_moduleAliases": {
+    "zeppos-app-utils": "node_modules/@zeppos/zeus-cli/private-modules/zeppos-app-utils"
+  }
+}

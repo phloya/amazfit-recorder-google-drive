@@ -1,0 +1,57 @@
+{
+  "configVersion": "v3",
+  "app": {
+    "appId": 29592,
+    "appName": "Диктофон",
+    "appType": "app",
+    "version": {
+      "code": 6,
+      "name": "1.2.0"
+    },
+    "icon": "icon.png",
+    "vender": "personal",
+    "description": "Запись по кнопке и выгрузка в Google Drive"
+  },
+  "permissions": [
+    "data:os.device.info",
+    "device:os.mic",
+    "data:os.mic.record"
+  ],
+  "runtime": {
+    "apiVersion": {
+      "compatible": "3.6",
+      "target": "3.6",
+      "minVersion": "3.6"
+    }
+  },
+  "targets": {
+    "common": {
+      "module": {
+        "page": {
+          "pages": [
+            "page/index",
+            "page/files"
+          ]
+        },
+        "app-side": {
+          "path": "app-side/index"
+        }
+      },
+      "platforms": [
+        {
+          "st": "r"
+        }
+      ],
+      "designWidth": 480
+    }
+  },
+  "i18n": {
+    "en-US": {
+      "appName": "Recorder"
+    },
+    "ru-RU": {
+      "appName": "Диктофон"
+    }
+  },
+  "defaultLanguage": "en-US"
+}
